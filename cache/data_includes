@@ -1,0 +1,313 @@
+//
+// Define a new "Dialog" controller, which is a combination of a "Message" (the
+// dialog) and a "Question" (whether the speaker is in this epistemic state or
+// that).
+//
+define_ibex_controller({
+    name: "Dialog",
+    jqueryWidget: {
+        _init: function () {
+            this.options.transfer = null; // Remove "Click here to continue" message.
+            this.element.VBox({
+                options: this.options,
+                triggers: [1],
+                children: [
+                    "Message", this.options,
+                    "Question", this.options
+                ]
+            });
+        }
+    },
+    properties: { }
+});
+
+var shuffleSequence = seq("consent", "instructions", sepWith("sep", seq("practice", shuffle(rshuffle("fcert", "funcert"), rshuffle("fall", "rfr")))), "questionnaire");
+var showProgressBar = false;
+var completionMessage = "The results were successfully sent to the server. Thanks! Now you need to go back to Mechanical Turk and enter the code XXXXXX to validate your participation and obtain your payment."
+
+var defaults = [
+    "Separator", {
+        transfer: "keypress",
+        normalMessage: "Please wait for the next dialog.",
+    },
+    "Form", {
+        saveReactionTime: true
+    },
+    "Dialog", {
+        showNumbers: false,
+        randomOrder: true
+    }
+];
+
+var items = [
+
+    //
+    // Separator.
+    //
+    ["sep", "Separator", { }],
+
+    //
+    // Introductory materials.
+    //
+    ["consent", "Form", {html: {include: "consent.html"}}],
+    ["instructions", "Form", {html: {include: "instructions.html"}}],
+
+    //
+    // Practice trials.
+    //
+    ["practice", "Dialog", {
+        html: '<div id="audio"><audio controls autoplay><source src="https://ia800701.us.archive.org/15/items/test_wav/Untitled3.wav" type="audio/wav"></audio></div>',
+        q: "Based on Noah's response, which of the following sentences is true?",
+        as: ["Noah thinks that some of the students passed.",
+             "Noah isn't sure whether or not any of the students passed."]
+    }],
+
+    ["practice", "Dialog", {
+        html: '<div id="audio"><audio controls autoplay><source src="https://ia800701.us.archive.org/15/items/test_wav/Untitled3.wav" type="audio/wav"></audio></div>',
+        q: "Based on Liam's response, which of the following sentences is true?",
+        as: ["Liam thinks that some of the novels were in French.",
+             "Liam isn't sure whether or not any of the novels were in French."]
+    }],
+
+    //
+    // The real trials.
+    //
+    ["fall", "Dialog", {
+        html: '<div id="audio"><audio controls autoplay><source src="https://ia800701.us.archive.org/15/items/test_wav/Untitled3.wav" type="audio/wav"></audio></div>',
+        q: "Based on Noah's response, which of the following sentences is true?",
+        as: ["Noah thinks that not all of the students passed.",
+             "Noah isn't sure whether or not all of the students passed."]
+    }],
+
+    ["rfr", "Dialog", {
+        html: '<div id="audio"><audio controls autoplay><source src="https://ia800701.us.archive.org/15/items/test_wav/Untitled3.wav" type="audio/wav"></audio></div>',
+        q: "Based on Noah's response, which of the following sentences is true?",
+        as: ["Noah thinks that not all of the students passed.",
+             "Noah isn't sure whether or not all of the students passed."]
+    }],
+
+    ["fall", "Dialog", {
+        html: '<div id="audio"><audio controls autoplay><source src="https://ia800701.us.archive.org/15/items/test_wav/Untitled3.wav" type="audio/wav"></audio></div>',
+        q: "Based on Liam's response, which of the following sentences is true?",
+        as: ["Liam thinks that not all of the novels were in French.",
+             "Liam isn't sure whether or not all of the novels were in French."]
+    }],
+
+    ["rfr", "Dialog", {
+        html: '<div id="audio"><audio controls autoplay><source src="https://ia800701.us.archive.org/15/items/test_wav/Untitled3.wav" type="audio/wav"></audio></div>',
+        q: "Based on Liam's response, which of the following sentences is true?",
+        as: ["Liam thinks that not all of the novels were in French.",
+             "Liam isn't sure whether or not all of the novels were in French."]
+    }],
+
+    ["fall", "Dialog", {
+        html: '<div id="audio"><audio controls autoplay><source src="https://ia800701.us.archive.org/15/items/test_wav/Untitled3.wav" type="audio/wav"></audio></div>',
+        q: "Based on William's response, which of the following sentences is true?",
+        as: ["William thinks that not all of the horses are fast.",
+             "William isn't sure whether or not all of the horses are fast."]
+    }],
+
+    ["rfr", "Dialog", {
+        html: '<div id="audio"><audio controls autoplay><source src="https://ia800701.us.archive.org/15/items/test_wav/Untitled3.wav" type="audio/wav"></audio></div>',
+        q: "Based on William's response, which of the following sentences is true?",
+        as: ["William thinks that not all of the horses are fast.",
+             "William isn't sure whether or not all of the horses are fast."]
+    }],
+
+    ["fall", "Dialog", {
+        html: '<div id="audio"><audio controls autoplay><source src="https://ia800701.us.archive.org/15/items/test_wav/Untitled3.wav" type="audio/wav"></audio></div>',
+        q: "Based on Mason's response, which of the following sentences is true?",
+        as: ["Mason thinks that not all of the guests ate dinner.",
+             "Mason isn't sure whether or not all of the guests ate dinner."]
+    }],
+
+    ["rfr", "Dialog", {
+        html: '<div id="audio"><audio controls autoplay><source src="https://ia800701.us.archive.org/15/items/test_wav/Untitled3.wav" type="audio/wav"></audio></div>',
+        q: "Based on Mason's response, which of the following sentences is true?",
+        as: ["Mason thinks that not all of the guests ate dinner.",
+             "Mason isn't sure whether or not all of the guests ate dinner."]
+    }],
+
+    ["fall", "Dialog", {
+        html: '<div id="audio"><audio controls autoplay><source src="https://ia800701.us.archive.org/15/items/test_wav/Untitled3.wav" type="audio/wav"></audio></div>',
+        q: "Based on Benjamin's response, which of the following sentences is true?",
+        as: ["Benjamin thinks that not all of the dishes contain meat.",
+             "Benjamin isn't sure whether or not all of the dishes contain meat."]
+    }],
+
+    ["rfr", "Dialog", {
+        html: '<div id="audio"><audio controls autoplay><source src="https://ia800701.us.archive.org/15/items/test_wav/Untitled3.wav" type="audio/wav"></audio></div>',
+        q: "Based on Benjamin's response, which of the following sentences is true?",
+        as: ["Benjamin thinks that not all of the dishes contain meat.",
+             "Benjamin isn't sure whether or not all of the dishes contain meat."]
+    }],
+
+    ["fall", "Dialog", {
+        html: '<div id="audio"><audio controls autoplay><source src="https://ia800701.us.archive.org/15/items/test_wav/Untitled3.wav" type="audio/wav"></audio></div>',
+        q: "Based on Jacob's response, which of the following sentences is true?",
+        as: ["Jacob thinks that not all of the clients met Sophia.",
+             "Jacob isn't sure whether or not all of the clients met Sophia."]
+    }],
+
+    ["rfr", "Dialog", {
+        html: '<div id="audio"><audio controls autoplay><source src="https://ia800701.us.archive.org/15/items/test_wav/Untitled3.wav" type="audio/wav"></audio></div>',
+        q: "Based on Jacob's response, which of the following sentences is true?",
+        as: ["Jacob thinks that not all of the clients met Sophia.",
+             "Jacob isn't sure whether or not all of the clients met Sophia."]
+    }],
+
+    ["fall", "Dialog", {
+        html: '<div id="audio"><audio controls autoplay><source src="https://ia800701.us.archive.org/15/items/test_wav/Untitled3.wav" type="audio/wav"></audio></div>',
+        q: "Based on Michael's response, which of the following sentences is true?",
+        as: ["Michael thinks that not all of the planes have been delayed.",
+             "Michael isn't sure whether or not all of the planes have been delayed."]
+    }],
+
+    ["rfr", "Dialog", {
+        html: '<div id="audio"><audio controls autoplay><source src="https://ia800701.us.archive.org/15/items/test_wav/Untitled3.wav" type="audio/wav"></audio></div>',
+        q: "Based on Michael's response, which of the following sentences is true?",
+        as: ["Michael thinks that not all of the planes have been delayed.",
+             "Michael isn't sure whether or not all of the planes have been delayed."]
+    }],
+
+    ["fall", "Dialog", {
+        html: '<div id="audio"><audio controls autoplay><source src="https://ia800701.us.archive.org/15/items/test_wav/Untitled3.wav" type="audio/wav"></audio></div>',
+        q: "Based on Elijah's response, which of the following sentences is true?",
+        as: ["Elijah thinks that not all of the reports were filed.",
+             "Elijah isn't sure whether or not all of the reports were filed."]
+    }],
+
+    ["rfr", "Dialog", {
+        html: '<div id="audio"><audio controls autoplay><source src="https://ia800701.us.archive.org/15/items/test_wav/Untitled3.wav" type="audio/wav"></audio></div>',
+        q: "Based on Elijah's response, which of the following sentences is true?",
+        as: ["Elijah thinks that not all of the reports were filed.",
+             "Elijah isn't sure whether or not all of the reports were filed."]
+    }],
+
+    //
+    // Filler trials.
+    //
+    ["fcert", "Dialog", {
+        html: '<div id="audio"><audio controls autoplay><source src="https://ia800701.us.archive.org/15/items/test_wav/Untitled3.wav" type="audio/wav"></audio></div>',
+        q: "Based on Noah's response, which of the following sentences is true?",
+        as: ["Noah thinks that some of the students passed.",
+             "Noah isn't sure whether or not any of the students passed."]
+    }],
+
+    ["funcert", "Dialog", {
+        html: '<div id="audio"><audio controls autoplay><source src="https://ia800701.us.archive.org/15/items/test_wav/Untitled3.wav" type="audio/wav"></audio></div>',
+        q: "Based on Noah's response, which of the following sentences is true?",
+        as: ["Noah thinks that some of the students passed.",
+             "Noah isn't sure whether or not any of the students passed."]
+    }],
+
+    ["fcert", "Dialog", {
+        html: '<div id="audio"><audio controls autoplay><source src="https://ia800701.us.archive.org/15/items/test_wav/Untitled3.wav" type="audio/wav"></audio></div>',
+        q: "Based on Liam's response, which of the following sentences is true?",
+        as: ["Liam thinks that some of the novels were in French.",
+             "Liam isn't sure whether or not any of the novels were in French."]
+    }],
+
+    ["funcert", "Dialog", {
+        html: '<div id="audio"><audio controls autoplay><source src="https://ia800701.us.archive.org/15/items/test_wav/Untitled3.wav" type="audio/wav"></audio></div>',
+        q: "Based on Liam's response, which of the following sentences is true?",
+        as: ["Liam thinks that some of the novels were in French.",
+             "Liam isn't sure whether or not any of the novels were in French."]
+    }],
+
+    ["fcert", "Dialog", {
+        html: '<div id="audio"><audio controls autoplay><source src="https://ia800701.us.archive.org/15/items/test_wav/Untitled3.wav" type="audio/wav"></audio></div>',
+        q: "Based on William's response, which of the following sentences is true?",
+        as: ["William thinks that some of the horses are fast.",
+             "William isn't sure whether or not any of the horses are fast."]
+    }],
+
+    ["funcert", "Dialog", {
+        html: '<div id="audio"><audio controls autoplay><source src="https://ia800701.us.archive.org/15/items/test_wav/Untitled3.wav" type="audio/wav"></audio></div>',
+        q: "Based on William's response, which of the following sentences is true?",
+        as: ["William thinks that some of the horses are fast.",
+             "William isn't sure whether or not any of the horses are fast."]
+    }],
+
+    ["fcert", "Dialog", {
+        html: '<div id="audio"><audio controls autoplay><source src="https://ia800701.us.archive.org/15/items/test_wav/Untitled3.wav" type="audio/wav"></audio></div>',
+        q: "Based on Mason's response, which of the following sentences is true?",
+        as: ["Mason thinks that some of the guests ate dinner.",
+             "Mason isn't sure whether or not any of the guests ate dinner."]
+    }],
+
+    ["funcert", "Dialog", {
+        html: '<div id="audio"><audio controls autoplay><source src="https://ia800701.us.archive.org/15/items/test_wav/Untitled3.wav" type="audio/wav"></audio></div>',
+        q: "Based on Mason's response, which of the following sentences is true?",
+        as: ["Mason thinks that some of the guests ate dinner.",
+             "Mason isn't sure whether or not any of the guests ate dinner."]
+    }],
+
+    ["fcert", "Dialog", {
+        html: '<div id="audio"><audio controls autoplay><source src="https://ia800701.us.archive.org/15/items/test_wav/Untitled3.wav" type="audio/wav"></audio></div>',
+        q: "Based on Benjamin's response, which of the following sentences is true?",
+        as: ["Benjamin thinks that some of the dishes contain meat.",
+             "Benjamin isn't sure whether or not any of the dishes contain meat."]
+    }],
+
+    ["funcert", "Dialog", {
+        html: '<div id="audio"><audio controls autoplay><source src="https://ia800701.us.archive.org/15/items/test_wav/Untitled3.wav" type="audio/wav"></audio></div>',
+        q: "Based on Benjamin's response, which of the following sentences is true?",
+        as: ["Benjamin thinks that some of the dishes contain meat.",
+             "Benjamin isn't sure whether or not any of the dishes contain meat."]
+    }],
+
+    ["fcert", "Dialog", {
+        html: '<div id="audio"><audio controls autoplay><source src="https://ia800701.us.archive.org/15/items/test_wav/Untitled3.wav" type="audio/wav"></audio></div>',
+        q: "Based on Jacob's response, which of the following sentences is true?",
+        as: ["Jacob thinks that some of the clients met Sophia.",
+             "Jacob isn't sure whether or not any of the clients met Sophia."]
+    }],
+
+    ["funcert", "Dialog", {
+        html: '<div id="audio"><audio controls autoplay><source src="https://ia800701.us.archive.org/15/items/test_wav/Untitled3.wav" type="audio/wav"></audio></div>',
+        q: "Based on Jacob's response, which of the following sentences is true?",
+        as: ["Jacob thinks that some of the clients met Sophia.",
+             "Jacob isn't sure whether or not any of the clients met Sophia."]
+    }],
+
+    ["fcert", "Dialog", {
+        html: '<div id="audio"><audio controls autoplay><source src="https://ia800701.us.archive.org/15/items/test_wav/Untitled3.wav" type="audio/wav"></audio></div>',
+        q: "Based on Michael's response, which of the following sentences is true?",
+        as: ["Michael thinks that some of the planes have been delayed.",
+             "Michael isn't sure whether or not any of the planes have been delayed."]
+    }],
+
+    ["funcert", "Dialog", {
+        html: '<div id="audio"><audio controls autoplay><source src="https://ia800701.us.archive.org/15/items/test_wav/Untitled3.wav" type="audio/wav"></audio></div>',
+        q: "Based on Michael's response, which of the following sentences is true?",
+        as: ["Michael thinks that some of the planes have been delayed.",
+             "Michael isn't sure whether or not any of the planes have been delayed."]
+    }],
+
+    ["fcert", "Dialog", {
+        html: '<div id="audio"><audio controls autoplay><source src="https://ia800701.us.archive.org/15/items/test_wav/Untitled3.wav" type="audio/wav"></audio></div>',
+        q: "Based on Elijah's response, which of the following sentences is true?",
+        as: ["Elijah thinks that some of the reports were filed.",
+             "Elijah isn't sure whether or not any of the reports were filed."]
+    }],
+
+    ["funcert", "Dialog", {
+        html: '<div id="audio"><audio controls autoplay><source src="https://ia800701.us.archive.org/15/items/test_wav/Untitled3.wav" type="audio/wav"></audio></div>',
+        q: "Based on Elijah's response, which of the following sentences is true?",
+        as: ["Elijah thinks that some of the reports were filed.",
+             "Elijah isn't sure whether or not any of the reports were filed."]
+    }],
+
+    //
+    // Questionnaire.
+    //
+    ["questionnaire", "Form", {
+        html: {include: "questionnaire.html"},
+        validators: {
+            age: function (s) { if (s.match(/^\d+$/)) return true; else return "Bad value for \u2018age\u2019"; }
+        }
+    }],
+];
+
+
