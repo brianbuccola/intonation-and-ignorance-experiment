@@ -28,7 +28,7 @@ var completionMessage = "The results were successfully sent to the server. Thank
 var defaults = [
     "Separator", {
         transfer: "keypress",
-        normalMessage: "Please wait for the next dialogue.",
+        normalMessage: "Press any key to continue to the next dialogue.",
     },
     "Form", {
         saveReactionTime: true
