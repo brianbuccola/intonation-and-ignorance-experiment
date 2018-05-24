@@ -34,8 +34,8 @@ var defaults = [
         saveReactionTime: true
     },
     "Dialogue", {
+        hasCorrect: true,
         showNumbers: false,
-        randomOrder: true
     }
 ];
 
@@ -67,8 +67,8 @@ var items = [
         html: '<div id="audio"><audio controls controlsList="nodownload" autoplay><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/novels-funcert.wav" type="audio/wav"></audio></div>',
         // html: "<p><b>Condition:</b> Practice filler uncertainty</p><p><em>Q: Were any of the novels in French?<br>A: I'm not sure whether or not any of them were in French.</em></p>",
         q: "Based on Liam's response, which of the following sentences is true?",
-        as: ["Liam thinks that some of the novels were in French.",
-             "Liam isn't sure whether or not any of the novels were in French."]
+        as: ["Liam isn't sure whether or not any of the novels were in French.",
+             "Liam thinks that some of the novels were in French."]
     }],
 
     //
@@ -86,8 +86,8 @@ var items = [
         html: '<div id="audio"><audio controls controlsList="nodownload" autoplay><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/students-rfr.wav" type="audio/wav"></audio></div>',
         // html: "<p><b>Condition:</b> RFR (real)</p><p><em>Q: Did all of the students pass?<br>A: Some of them passed.</em></p>",
         q: "Based on Noah's response, which of the following sentences is true?",
-        as: ["Noah thinks that not all of the students passed.",
-             "Noah isn't sure whether or not all of the students passed."]
+        as: ["Noah isn't sure whether or not all of the students passed.",
+             "Noah thinks that not all of the students passed."]
     }],
 
     ["fall", "Dialogue", {
@@ -102,8 +102,8 @@ var items = [
         html: '<div id="audio"><audio controls controlsList="nodownload" autoplay><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/novels-rfr.wav" type="audio/wav"></audio></div>',
         // html: "<p><b>Condition:</b> RFR (real)</p><p><em>Q: Were all of the novels in French?<br>A: Some of them were in French.</em></p>",
         q: "Based on Liam's response, which of the following sentences is true?",
-        as: ["Liam thinks that not all of the novels were in French.",
-             "Liam isn't sure whether or not all of the novels were in French."]
+        as: ["Liam isn't sure whether or not all of the novels were in French.",
+             "Liam thinks that not all of the novels were in French."]
     }],
 
     ["fall", "Dialogue", {
@@ -118,8 +118,8 @@ var items = [
         html: '<div id="audio"><audio controls controlsList="nodownload" autoplay><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/horses-rfr.wav" type="audio/wav"></audio></div>',
         // html: "<p><b>Condition:</b> RFR (real)</p><p><em>Q: Are all of the horses fast?<br>A: Some of them are fast.</em></p>",
         q: "Based on William's response, which of the following sentences is true?",
-        as: ["William thinks that not all of the horses are fast.",
-             "William isn't sure whether or not all of the horses are fast."]
+        as: ["William isn't sure whether or not all of the horses are fast.",
+             "William thinks that not all of the horses are fast."]
     }],
 
     ["fall", "Dialogue", {
@@ -134,8 +134,8 @@ var items = [
         html: '<div id="audio"><audio controls controlsList="nodownload" autoplay><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/guests-rfr.wav" type="audio/wav"></audio></div>',
         // html: "<p><b>Condition:</b> RFR (real)</p><p><em>Q: Did all of the guests eat dinner?<br>A: Some of them ate dinner.</em></p>",
         q: "Based on Mason's response, which of the following sentences is true?",
-        as: ["Mason thinks that not all of the guests ate dinner.",
-             "Mason isn't sure whether or not all of the guests ate dinner."]
+        as: ["Mason isn't sure whether or not all of the guests ate dinner.",
+             "Mason thinks that not all of the guests ate dinner."]
     }],
 
     ["fall", "Dialogue", {
@@ -150,8 +150,8 @@ var items = [
         html: '<div id="audio"><audio controls controlsList="nodownload" autoplay><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/dishes-rfr.wav" type="audio/wav"></audio></div>',
         // html: "<p><b>Condition:</b> RFR (real)</p><p><em>Q: Do all of the dishes contain meat?<br>A: Some of them contain meat.</em></p>",
         q: "Based on Benjamin's response, which of the following sentences is true?",
-        as: ["Benjamin thinks that not all of the dishes contain meat.",
-             "Benjamin isn't sure whether or not all of the dishes contain meat."]
+        as: ["Benjamin isn't sure whether or not all of the dishes contain meat.",
+             "Benjamin thinks that not all of the dishes contain meat."]
     }],
 
     ["fall", "Dialogue", {
@@ -166,8 +166,8 @@ var items = [
         html: '<div id="audio"><audio controls controlsList="nodownload" autoplay><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/clients-rfr.wav" type="audio/wav"></audio></div>',
         // html: "<p><b>Condition:</b> RFR (real)</p><p><em>Q: Did all of the clients meet Sophia?<br>A: Some of them met Sophia.</em></p>",
         q: "Based on Jacob's response, which of the following sentences is true?",
-        as: ["Jacob thinks that not all of the clients met Sophia.",
-             "Jacob isn't sure whether or not all of the clients met Sophia."]
+        as: ["Jacob isn't sure whether or not all of the clients met Sophia.",
+             "Jacob thinks that not all of the clients met Sophia."]
     }],
 
     ["fall", "Dialogue", {
@@ -182,8 +182,8 @@ var items = [
         html: '<div id="audio"><audio controls controlsList="nodownload" autoplay><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/planes-rfr.wav" type="audio/wav"></audio></div>',
         // html: "<p><b>Condition:</b> RFR (real)</p><p><em>Q: Have all of the planes been delayed?<br>A: Some of them have been delayed.</em></p>",
         q: "Based on Michael's response, which of the following sentences is true?",
-        as: ["Michael thinks that not all of the planes have been delayed.",
-             "Michael isn't sure whether or not all of the planes have been delayed."]
+        as: ["Michael isn't sure whether or not all of the planes have been delayed.",
+             "Michael thinks that not all of the planes have been delayed."]
     }],
 
     ["fall", "Dialogue", {
@@ -198,8 +198,8 @@ var items = [
         html: '<div id="audio"><audio controls controlsList="nodownload" autoplay><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/reports-rfr.wav" type="audio/wav"></audio></div>',
         // html: "<p><b>Condition:</b> RFR (real)</p><p><em>Q: Were all of the reports filed?<br>A: Some of them were filed.</em></p>",
         q: "Based on Elijah's response, which of the following sentences is true?",
-        as: ["Elijah thinks that not all of the reports were filed.",
-             "Elijah isn't sure whether or not all of the reports were filed."]
+        as: ["Elijah isn't sure whether or not all of the reports were filed.",
+             "Elijah thinks that not all of the reports were filed."]
     }],
 
     //
@@ -217,8 +217,8 @@ var items = [
         html: '<div id="audio"><audio controls controlsList="nodownload" autoplay><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/students-funcert.wav" type="audio/wav"></audio></div>',
         // html: "<p><b>Condition:</b> Uncertainty filler</p><p><em>Q: Did any of the students pass?<br>A: I'm not sure whether or not any of them passed.</em></p>",
         q: "Based on Noah's response, which of the following sentences is true?",
-        as: ["Noah thinks that some of the students passed.",
-             "Noah isn't sure whether or not any of the students passed."]
+        as: ["Noah isn't sure whether or not any of the students passed.",
+             "Noah thinks that some of the students passed."]
     }],
 
     ["fcert", "Dialogue", {
@@ -233,8 +233,8 @@ var items = [
         html: '<div id="audio"><audio controls controlsList="nodownload" autoplay><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/novels-funcert.wav" type="audio/wav"></audio></div>',
         // html: "<p><b>Condition:</b> Uncertainty filler</p><p><em>Q: Were any of the novels in French?<br>A: I'm not sure whether or not any of them were in French.</em></p>",
         q: "Based on Liam's response, which of the following sentences is true?",
-        as: ["Liam thinks that some of the novels were in French.",
-             "Liam isn't sure whether or not any of the novels were in French."]
+        as: ["Liam isn't sure whether or not any of the novels were in French.",
+             "Liam thinks that some of the novels were in French."]
     }],
 
     ["fcert", "Dialogue", {
@@ -249,8 +249,8 @@ var items = [
         html: '<div id="audio"><audio controls controlsList="nodownload" autoplay><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/horses-funcert.wav" type="audio/wav"></audio></div>',
         // html: "<p><b>Condition:</b> Uncertainty filler</p><p><em>Q: Are any of the horses fast?<br>A: I'm not sure whether or not any of them are fast.</em></p>",
         q: "Based on William's response, which of the following sentences is true?",
-        as: ["William thinks that some of the horses are fast.",
-             "William isn't sure whether or not any of the horses are fast."]
+        as: ["William isn't sure whether or not any of the horses are fast.",
+             "William thinks that some of the horses are fast."]
     }],
 
     ["fcert", "Dialogue", {
@@ -265,8 +265,8 @@ var items = [
         html: '<div id="audio"><audio controls controlsList="nodownload" autoplay><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/guests-funcert.wav" type="audio/wav"></audio></div>',
         // html: "<p><b>Condition:</b> Uncertainty filler</p><p><em>Q: Did any of the guests eat dinner?<br>A: I'm not sure whether or not any of them ate dinner.</em></p>",
         q: "Based on Mason's response, which of the following sentences is true?",
-        as: ["Mason thinks that some of the guests ate dinner.",
-             "Mason isn't sure whether or not any of the guests ate dinner."]
+        as: ["Mason isn't sure whether or not any of the guests ate dinner.",
+             "Mason thinks that some of the guests ate dinner."]
     }],
 
     ["fcert", "Dialogue", {
@@ -281,8 +281,8 @@ var items = [
         html: '<div id="audio"><audio controls controlsList="nodownload" autoplay><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/dishes-funcert.wav" type="audio/wav"></audio></div>',
         // html: "<p><b>Condition:</b> Uncertainty filler</p><p><em>Q: Do any of the dishes contain meat?<br>A: I'm not sure whether or not any of them contain meat.</em></p>",
         q: "Based on Benjamin's response, which of the following sentences is true?",
-        as: ["Benjamin thinks that some of the dishes contain meat.",
-             "Benjamin isn't sure whether or not any of the dishes contain meat."]
+        as: ["Benjamin isn't sure whether or not any of the dishes contain meat.",
+             "Benjamin thinks that some of the dishes contain meat."]
     }],
 
     ["fcert", "Dialogue", {
@@ -297,8 +297,8 @@ var items = [
         html: '<div id="audio"><audio controls controlsList="nodownload" autoplay><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/clients-funcert.wav" type="audio/wav"></audio></div>',
         // html: "<p><b>Condition:</b> Uncertainty filler</p><p><em>Q: Did any of the clients meet Sophia?<br>A: I'm not sure whether or not any of them met Sophia.</em></p>",
         q: "Based on Jacob's response, which of the following sentences is true?",
-        as: ["Jacob thinks that some of the clients met Sophia.",
-             "Jacob isn't sure whether or not any of the clients met Sophia."]
+        as: ["Jacob isn't sure whether or not any of the clients met Sophia.",
+             "Jacob thinks that some of the clients met Sophia."]
     }],
 
     ["fcert", "Dialogue", {
@@ -313,8 +313,8 @@ var items = [
         html: '<div id="audio"><audio controls controlsList="nodownload" autoplay><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/planes-funcert.wav" type="audio/wav"></audio></div>',
         // html: "<p><b>Condition:</b> Uncertainty filler</p><p><em>Q: Have any of the planes been delayed?<br>A: I'm not sure whether or not any of them have been delayed.</em></p>",
         q: "Based on Michael's response, which of the following sentences is true?",
-        as: ["Michael thinks that some of the planes have been delayed.",
-             "Michael isn't sure whether or not any of the planes have been delayed."]
+        as: ["Michael isn't sure whether or not any of the planes have been delayed.",
+             "Michael thinks that some of the planes have been delayed."]
     }],
 
     ["fcert", "Dialogue", {
@@ -329,8 +329,8 @@ var items = [
         html: '<div id="audio"><audio controls controlsList="nodownload" autoplay><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/reports-funcert.wav" type="audio/wav"></audio></div>',
         // html: "<p><b>Condition:</b> Uncertainty filler</p><p><em>Q: Were any of the reports filed?<br>A: I'm not sure whether or not any of them were filed.</em></p>",
         q: "Based on Elijah's response, which of the following sentences is true?",
-        as: ["Elijah thinks that some of the reports were filed.",
-             "Elijah isn't sure whether or not any of the reports were filed."]
+        as: ["Elijah isn't sure whether or not any of the reports were filed.",
+             "Elijah thinks that some of the reports were filed."]
     }],
 
     //
