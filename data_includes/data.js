@@ -246,7 +246,7 @@ var items = [
     }],
 
     ["funcert", "Dialogue", {
-        html: '<div id="audio"><audio controls controlsList="nodownload" autoplay><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/horses-rfr.wav" type="audio/wav"></audio></div>',
+        html: '<div id="audio"><audio controls controlsList="nodownload" autoplay><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/horses-funcert.wav" type="audio/wav"></audio></div>',
         // html: "<p><b>Condition:</b> Uncertainty filler</p><p><em>Q: Are any of the horses fast?<br>A: I'm not sure whether or not any of them are fast.</em></p>",
         q: "Based on William's response, which of the following sentences is true?",
         as: ["William thinks that some of the horses are fast.",
@@ -262,7 +262,7 @@ var items = [
     }],
 
     ["funcert", "Dialogue", {
-        html: '<div id="audio"><audio controls controlsList="nodownload" autoplay><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/guests-rfr.wav" type="audio/wav"></audio></div>',
+        html: '<div id="audio"><audio controls controlsList="nodownload" autoplay><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/guests-funcert.wav" type="audio/wav"></audio></div>',
         // html: "<p><b>Condition:</b> Uncertainty filler</p><p><em>Q: Did any of the guests eat dinner?<br>A: I'm not sure whether or not any of them ate dinner.</em></p>",
         q: "Based on Mason's response, which of the following sentences is true?",
         as: ["Mason thinks that some of the guests ate dinner.",
@@ -278,7 +278,7 @@ var items = [
     }],
 
     ["funcert", "Dialogue", {
-        html: '<div id="audio"><audio controls controlsList="nodownload" autoplay><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/dishes-rfr.wav" type="audio/wav"></audio></div>',
+        html: '<div id="audio"><audio controls controlsList="nodownload" autoplay><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/dishes-funcert.wav" type="audio/wav"></audio></div>',
         // html: "<p><b>Condition:</b> Uncertainty filler</p><p><em>Q: Do any of the dishes contain meat?<br>A: I'm not sure whether or not any of them contain meat.</em></p>",
         q: "Based on Benjamin's response, which of the following sentences is true?",
         as: ["Benjamin thinks that some of the dishes contain meat.",
@@ -294,7 +294,7 @@ var items = [
     }],
 
     ["funcert", "Dialogue", {
-        html: '<div id="audio"><audio controls controlsList="nodownload" autoplay><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/clients-rfr.wav" type="audio/wav"></audio></div>',
+        html: '<div id="audio"><audio controls controlsList="nodownload" autoplay><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/clients-funcert.wav" type="audio/wav"></audio></div>',
         // html: "<p><b>Condition:</b> Uncertainty filler</p><p><em>Q: Did any of the clients meet Sophia?<br>A: I'm not sure whether or not any of them met Sophia.</em></p>",
         q: "Based on Jacob's response, which of the following sentences is true?",
         as: ["Jacob thinks that some of the clients met Sophia.",
@@ -310,7 +310,7 @@ var items = [
     }],
 
     ["funcert", "Dialogue", {
-        html: '<div id="audio"><audio controls controlsList="nodownload" autoplay><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/planes-rfr.wav" type="audio/wav"></audio></div>',
+        html: '<div id="audio"><audio controls controlsList="nodownload" autoplay><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/planes-funcert.wav" type="audio/wav"></audio></div>',
         // html: "<p><b>Condition:</b> Uncertainty filler</p><p><em>Q: Have any of the planes been delayed?<br>A: I'm not sure whether or not any of them have been delayed.</em></p>",
         q: "Based on Michael's response, which of the following sentences is true?",
         as: ["Michael thinks that some of the planes have been delayed.",
@@ -326,7 +326,7 @@ var items = [
     }],
 
     ["funcert", "Dialogue", {
-        html: '<div id="audio"><audio controls controlsList="nodownload" autoplay><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/reports-rfr.wav" type="audio/wav"></audio></div>',
+        html: '<div id="audio"><audio controls controlsList="nodownload" autoplay><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/reports-funcert.wav" type="audio/wav"></audio></div>',
         // html: "<p><b>Condition:</b> Uncertainty filler</p><p><em>Q: Were any of the reports filed?<br>A: I'm not sure whether or not any of them were filed.</em></p>",
         q: "Based on Elijah's response, which of the following sentences is true?",
         as: ["Elijah thinks that some of the reports were filed.",
