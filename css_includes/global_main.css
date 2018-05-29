@@ -43,3 +43,7 @@ span.retry:hover {
 span.retry:visited {
     color: blue;
 }
+/* Brian's additions */
+div#audio {
+    text-align: center;
+}
