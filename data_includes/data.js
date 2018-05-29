@@ -21,7 +21,7 @@ define_ibex_controller({
     properties: { }
 });
 
-var shuffleSequence = seq("consent", "instructions", sepWith("sep", seq("practice", shuffle(rshuffle("fall", "rfr"), "filler"))), "questionnaire");
+var shuffleSequence = seq("consent", "instructions", sepWith("sep", seq("practice", randomize(anyOf("fall", "rfr", "filler")))), "questionnaire");
 var showProgressBar = false;
 var completionMessage = "The results were successfully sent to the server. Thanks! Now you need to go back to Mechanical Turk and enter the code XXXXXX to validate your participation and obtain your payment."
 
