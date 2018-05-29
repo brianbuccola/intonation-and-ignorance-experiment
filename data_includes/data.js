@@ -56,7 +56,7 @@ var items = [
     // Practice trials.
     //
     ["practice", "Dialogue", {
-        html: '<div id="audio"><audio controls controlsList="nodownload" autoplay><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/targets/students-fall.wav" type="audio/wav"></audio></div>',
+        html: '<p style="text-align:center;"><em>Practice</em></p><div id="audio"><audio controls controlsList="nodownload" autoplay><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/targets/students-fall.wav" type="audio/wav"></audio></div>',
         // html: "<p><b>Condition:</b> Practice filler certainty (falling)</p><p><em>Q: Did all of the students pass?<br>A: Some of them passed.</em></p>",
         q: "Based on Noah's response, which of the following sentences is true?",
         as: ["Noah thinks that some of the students passed.",
@@ -64,7 +64,7 @@ var items = [
     }],
 
     ["practice", "Dialogue", {
-        html: '<div id="audio"><audio controls controlsList="nodownload" autoplay><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/fillers/alcohol-yes-dec-rev.wav" type="audio/wav"></audio></div>',
+        html: '<p style="text-align:center;"><em>Practice</em></p><div id="audio"><audio controls controlsList="nodownload" autoplay><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/fillers/alcohol-yes-dec-rev.wav" type="audio/wav"></audio></div>',
         // html: "<p><b>Condition:</b> Practice filler uncertainty</p><p><em>Q: Were any of the novels in French?<br>A: I'm not sure whether or not any of them were in French.</em></p>",
         q: "Based on Pat's response, which of the following sentences is true?",
         as: ["Pat drinks alcohol.",
