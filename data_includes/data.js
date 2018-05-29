@@ -21,7 +21,7 @@ define_ibex_controller({
     properties: { }
 });
 
-var shuffleSequence = seq("consent", "instructions", sepWith("sep", seq("practice", shuffle(rshuffle("fall", "rfr"), rshuffle("fcert", "funcert")))), "questionnaire");
+var shuffleSequence = seq("consent", "instructions", sepWith("sep", seq("practice", shuffle(rshuffle("fall", "rfr"), "filler"))), "questionnaire");
 var showProgressBar = false;
 var completionMessage = "The results were successfully sent to the server. Thanks! Now you need to go back to Mechanical Turk and enter the code XXXXXX to validate your participation and obtain your payment."
 
@@ -64,11 +64,11 @@ var items = [
     }],
 
     ["practice", "Dialogue", {
-        html: '<div id="audio"><audio controls controlsList="nodownload" autoplay><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/targets/novels-funcert.wav" type="audio/wav"></audio></div>',
+        html: '<div id="audio"><audio controls controlsList="nodownload" autoplay><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/fillers/alcohol-yes-dec-rev.wav" type="audio/wav"></audio></div>',
         // html: "<p><b>Condition:</b> Practice filler uncertainty</p><p><em>Q: Were any of the novels in French?<br>A: I'm not sure whether or not any of them were in French.</em></p>",
-        q: "Based on Liam's response, which of the following sentences is true?",
-        as: ["Liam isn't sure whether or not any of the novels were in French.",
-             "Liam thinks that some of the novels were in French."]
+        q: "Based on Pat's response, which of the following sentences is true?",
+        as: ["Pat drinks alcohol.",
+             "Pat doesn't drink alcohol."]
     }],
 
     //
@@ -205,132 +205,116 @@ var items = [
     //
     // Filler trials.
     //
-    ["fcert", "Dialogue", {
-        html: '<div id="audio"><audio controls controlsList="nodownload" autoplay><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/students-fall.wav" type="audio/wav"></audio></div>',
-        // html: "<p><b>Condition:</b> Certainty filler (falling)</p><p><em>Q: Did all of the students pass?<br>A: Some of them passed.</em></p>",
-        q: "Based on Noah's response, which of the following sentences is true?",
-        as: ["Noah thinks that some of the students passed.",
-             "Noah isn't sure whether or not any of the students passed."]
+    ["filler", "Dialogue", {
+        html: '<div id="audio"><audio controls controlsList="nodownload" autoplay><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/fillers/alcohol-not-no-CC-rev.wav" type="audio/wav"></audio></div>',
+        q: "Based on Pat's response, which of the following sentences is true?",
+        as: ["Pat doesn't drink alcohol.",
+             "Pat drinks alcohol."]
     }],
 
-    ["funcert", "Dialogue", {
-        html: '<div id="audio"><audio controls controlsList="nodownload" autoplay><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/students-funcert.wav" type="audio/wav"></audio></div>',
-        // html: "<p><b>Condition:</b> Uncertainty filler</p><p><em>Q: Did any of the students pass?<br>A: I'm not sure whether or not any of them passed.</em></p>",
-        q: "Based on Noah's response, which of the following sentences is true?",
-        as: ["Noah isn't sure whether or not any of the students passed.",
-             "Noah thinks that some of the students passed."]
+    ["filler", "Dialogue", {
+        html: '<div id="audio"><audio controls controlsList="nodownload" autoplay><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/fillers/alcohol-yes-dec-rev.wav" type="audio/wav"></audio></div>',
+        q: "Based on Pat's response, which of the following sentences is true?",
+        as: ["Pat drinks alcohol.",
+             "Pat doesn't drink alcohol."]
     }],
 
-    ["fcert", "Dialogue", {
-        html: '<div id="audio"><audio controls controlsList="nodownload" autoplay><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/novels-fall.wav" type="audio/wav"></audio></div>',
-        // html: "<p><b>Condition:</b> Certainty filler (falling)</p><p><em>Q: Were all of the novels in French?<br>A: Some of them were in French.</em></p>",
-        q: "Based on Liam's response, which of the following sentences is true?",
-        as: ["Liam thinks that some of the novels were in French.",
-             "Liam isn't sure whether or not any of the novels were in French."]
+    ["filler", "Dialogue", {
+        html: '<div id="audio"><audio controls controlsList="nodownload" autoplay><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/fillers/buy-no-dec-rev.wav" type="audio/wav"></audio></div>',
+        q: "Based on Chris's response, which of the following sentences is true?",
+        as: ["Chris isn't going to buy that.",
+             "Chris is going to buy that."]
     }],
 
-    ["funcert", "Dialogue", {
-        html: '<div id="audio"><audio controls controlsList="nodownload" autoplay><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/novels-funcert.wav" type="audio/wav"></audio></div>',
-        // html: "<p><b>Condition:</b> Uncertainty filler</p><p><em>Q: Were any of the novels in French?<br>A: I'm not sure whether or not any of them were in French.</em></p>",
-        q: "Based on Liam's response, which of the following sentences is true?",
-        as: ["Liam isn't sure whether or not any of the novels were in French.",
-             "Liam thinks that some of the novels were in French."]
+    ["filler", "Dialogue", {
+        html: '<div id="audio"><audio controls controlsList="nodownload" autoplay><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/fillers/buy-not-no-dec-con.wav" type="audio/wav"></audio></div>',
+        q: "Based on Chris's response, which of the following sentences is true?",
+        as: ["Chris isn't going to buy that.",
+             "Chris is going to buy that."]
     }],
 
-    ["fcert", "Dialogue", {
-        html: '<div id="audio"><audio controls controlsList="nodownload" autoplay><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/horses-fall.wav" type="audio/wav"></audio></div>',
-        // html: "<p><b>Condition:</b> Certainty filler (falling)</p><p><em>Q: Are all of the horses fast?<br>A: Some of them are fast.</em></p>",
-        q: "Based on William's response, which of the following sentences is true?",
-        as: ["William thinks that some of the horses are fast.",
-             "William isn't sure whether or not any of the horses are fast."]
+    ["filler", "Dialogue", {
+        html: '<div id="audio"><audio controls controlsList="nodownload" autoplay><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/fillers/employee-no-CC-rev.wav" type="audio/wav"></audio></div>',
+        q: "Based on Morgan's response, which of the following sentences is true?",
+        as: ["Morgan isn't an employee here.",
+             "Morgan is an employee here."]
     }],
 
-    ["funcert", "Dialogue", {
-        html: '<div id="audio"><audio controls controlsList="nodownload" autoplay><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/horses-funcert.wav" type="audio/wav"></audio></div>',
-        // html: "<p><b>Condition:</b> Uncertainty filler</p><p><em>Q: Are any of the horses fast?<br>A: I'm not sure whether or not any of them are fast.</em></p>",
-        q: "Based on William's response, which of the following sentences is true?",
-        as: ["William isn't sure whether or not any of the horses are fast.",
-             "William thinks that some of the horses are fast."]
+    ["filler", "Dialogue", {
+        html: '<div id="audio"><audio controls controlsList="nodownload" autoplay><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/fillers/employee-not-no-CC-rev.wav" type="audio/wav"></audio></div>',
+        q: "Based on Morgan's response, which of the following sentences is true?",
+        as: ["Morgan isn't an employee here.",
+             "Morgan is an employee here."]
     }],
 
-    ["fcert", "Dialogue", {
-        html: '<div id="audio"><audio controls controlsList="nodownload" autoplay><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/guests-fall.wav" type="audio/wav"></audio></div>',
-        // html: "<p><b>Condition:</b> Certainty filler (falling)</p><p><em>Q: Did all of the guests eat dinner?<br>A: Some of them ate dinner.</em></p>",
-        q: "Based on Mason's response, which of the following sentences is true?",
-        as: ["Mason thinks that some of the guests ate dinner.",
-             "Mason isn't sure whether or not any of the guests ate dinner."]
+    ["filler", "Dialogue", {
+        html: '<div id="audio"><audio controls controlsList="nodownload" autoplay><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/fillers/friend-no-dec-con.wav" type="audio/wav"></audio></div>',
+        q: "Based on Taylor's response, which of the following sentences is true?",
+        as: ["Taylor isn't a friend of Jenny's.",
+             "Taylor is a friend of Jenny's."]
     }],
 
-    ["funcert", "Dialogue", {
-        html: '<div id="audio"><audio controls controlsList="nodownload" autoplay><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/guests-funcert.wav" type="audio/wav"></audio></div>',
-        // html: "<p><b>Condition:</b> Uncertainty filler</p><p><em>Q: Did any of the guests eat dinner?<br>A: I'm not sure whether or not any of them ate dinner.</em></p>",
-        q: "Based on Mason's response, which of the following sentences is true?",
-        as: ["Mason isn't sure whether or not any of the guests ate dinner.",
-             "Mason thinks that some of the guests ate dinner."]
+    ["filler", "Dialogue", {
+        html: '<div id="audio"><audio controls controlsList="nodownload" autoplay><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/fillers/friend-not-yes-dec-con.wav" type="audio/wav"></audio></div>',
+        q: "Based on Taylor's response, which of the following sentences is true?",
+        as: ["Taylor is a friend of Jenny's.",
+             "Taylor isn't a friend of Jenny's."]
     }],
 
-    ["fcert", "Dialogue", {
-        html: '<div id="audio"><audio controls controlsList="nodownload" autoplay><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/dishes-fall.wav" type="audio/wav"></audio></div>',
-        // html: "<p><b>Condition:</b> Certainty filler (falling)</p><p><em>Q: Do all of the dishes contain meat?<br>A: Some of them contain meat.</em></p>",
-        q: "Based on Benjamin's response, which of the following sentences is true?",
-        as: ["Benjamin thinks that some of the dishes contain meat.",
-             "Benjamin isn't sure whether or not any of the dishes contain meat."]
+    ["filler", "Dialogue", {
+        html: '<div id="audio"><audio controls controlsList="nodownload" autoplay><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/fillers/hockey-not-no-dec-rev.wav" type="audio/wav"></audio></div>',
+        q: "Based on Jordan's response, which of the following sentences is true?",
+        as: ["Jordan didn't play on the hockey team.",
+             "Jordan played on the hockey team."]
     }],
 
-    ["funcert", "Dialogue", {
-        html: '<div id="audio"><audio controls controlsList="nodownload" autoplay><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/dishes-funcert.wav" type="audio/wav"></audio></div>',
-        // html: "<p><b>Condition:</b> Uncertainty filler</p><p><em>Q: Do any of the dishes contain meat?<br>A: I'm not sure whether or not any of them contain meat.</em></p>",
-        q: "Based on Benjamin's response, which of the following sentences is true?",
-        as: ["Benjamin isn't sure whether or not any of the dishes contain meat.",
-             "Benjamin thinks that some of the dishes contain meat."]
+    ["filler", "Dialogue", {
+        html: '<div id="audio"><audio controls controlsList="nodownload" autoplay><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/fillers/hockey-yes-dec-rev.wav" type="audio/wav"></audio></div>',
+        q: "Based on Jordan's response, which of the following sentences is true?",
+        as: ["Jordan played on the hockey team.",
+             "Jordan didn't play on the hockey team."]
     }],
 
-    ["fcert", "Dialogue", {
-        html: '<div id="audio"><audio controls controlsList="nodownload" autoplay><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/clients-fall.wav" type="audio/wav"></audio></div>',
-        // html: "<p><b>Condition:</b> Certainty filler (falling)</p><p><em>Q: Did all of the clients meet Sophia?<br>A: Some of them met Sophia.</em></p>",
-        q: "Based on Jacob's response, which of the following sentences is true?",
-        as: ["Jacob thinks that some of the clients met Sophia.",
-             "Jacob isn't sure whether or not any of the clients met Sophia."]
+    ["filler", "Dialogue", {
+        html: '<div id="audio"><audio controls controlsList="nodownload" autoplay><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/fillers/movies-not-yes-dec-con.wav" type="audio/wav"></audio></div>',
+        q: "Based on Devin's response, which of the following sentences is true?",
+        as: ["Devin likes movies.",
+             "Devin doesn't like movies."]
     }],
 
-    ["funcert", "Dialogue", {
-        html: '<div id="audio"><audio controls controlsList="nodownload" autoplay><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/clients-funcert.wav" type="audio/wav"></audio></div>',
-        // html: "<p><b>Condition:</b> Uncertainty filler</p><p><em>Q: Did any of the clients meet Sophia?<br>A: I'm not sure whether or not any of them met Sophia.</em></p>",
-        q: "Based on Jacob's response, which of the following sentences is true?",
-        as: ["Jacob isn't sure whether or not any of the clients met Sophia.",
-             "Jacob thinks that some of the clients met Sophia."]
+    ["filler", "Dialogue", {
+        html: '<div id="audio"><audio controls controlsList="nodownload" autoplay><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/fillers/movies-yes-CC-rev.wav" type="audio/wav"></audio></div>',
+        q: "Based on Devin's response, which of the following sentences is true?",
+        as: ["Devin likes movies.",
+             "Devin doesn't like movies."]
     }],
 
-    ["fcert", "Dialogue", {
-        html: '<div id="audio"><audio controls controlsList="nodownload" autoplay><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/planes-fall.wav" type="audio/wav"></audio></div>',
-        // html: "<p><b>Condition:</b> Certainty filler (falling)</p><p><em>Q: Have all of the planes been delayed?<br>A: Some of them have been delayed.</em></p>",
-        q: "Based on Michael's response, which of the following sentences is true?",
-        as: ["Michael thinks that some of the planes have been delayed.",
-             "Michael isn't sure whether or not any of the planes have been delayed."]
+    ["filler", "Dialogue", {
+        html: '<div id="audio"><audio controls controlsList="nodownload" autoplay><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/fillers/pres-no-CC-rev.wav" type="audio/wav"></audio></div>',
+        q: "Based on Hunter's response, which of the following sentences is true?",
+        as: ["Hunter isn't coming to the presentation.",
+             "Hunter is coming to the presentation."]
     }],
 
-    ["funcert", "Dialogue", {
-        html: '<div id="audio"><audio controls controlsList="nodownload" autoplay><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/planes-funcert.wav" type="audio/wav"></audio></div>',
-        // html: "<p><b>Condition:</b> Uncertainty filler</p><p><em>Q: Have any of the planes been delayed?<br>A: I'm not sure whether or not any of them have been delayed.</em></p>",
-        q: "Based on Michael's response, which of the following sentences is true?",
-        as: ["Michael isn't sure whether or not any of the planes have been delayed.",
-             "Michael thinks that some of the planes have been delayed."]
+    ["filler", "Dialogue", {
+        html: '<div id="audio"><audio controls controlsList="nodownload" autoplay><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/fillers/pres-not-yes-CC-rev.wav" type="audio/wav"></audio></div>',
+        q: "Based on Hunter's response, which of the following sentences is true?",
+        as: ["Hunter is coming to the presentation.",
+             "Hunter isn't coming to the presentation."]
     }],
 
-    ["fcert", "Dialogue", {
-        html: '<div id="audio"><audio controls controlsList="nodownload" autoplay><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/reports-fall.wav" type="audio/wav"></audio></div>',
-        // html: "<p><b>Condition:</b> Certainty filler (falling)</p><p><em>Q: Were all of the reports filed?<br>A: Some of them were filed.</em></p>",
-        q: "Based on Elijah's response, which of the following sentences is true?",
-        as: ["Elijah thinks that some of the reports were filed.",
-             "Elijah isn't sure whether or not any of the reports were filed."]
+    ["filler", "Dialogue", {
+        html: '<div id="audio"><audio controls controlsList="nodownload" autoplay><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/fillers/trash-not-yes-CC-rev.wav" type="audio/wav"></audio></div>',
+        q: "Based on Riley's response, which of the following sentences is true?",
+        as: ["Riley took the trash out.",
+             "Riley didn't take the trash out."]
     }],
 
-    ["funcert", "Dialogue", {
-        html: '<div id="audio"><audio controls controlsList="nodownload" autoplay><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/reports-funcert.wav" type="audio/wav"></audio></div>',
-        // html: "<p><b>Condition:</b> Uncertainty filler</p><p><em>Q: Were any of the reports filed?<br>A: I'm not sure whether or not any of them were filed.</em></p>",
-        q: "Based on Elijah's response, which of the following sentences is true?",
-        as: ["Elijah isn't sure whether or not any of the reports were filed.",
-             "Elijah thinks that some of the reports were filed."]
+    ["filler", "Dialogue", {
+        html: '<div id="audio"><audio controls controlsList="nodownload" autoplay><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/fillers/trash-yes-CC-rev.wav" type="audio/wav"></audio></div>',
+        q: "Based on Riley's response, which of the following sentences is true?",
+        as: ["Riley took the trash out.",
+             "Riley didn't take the trash out."]
     }],
 
     //
