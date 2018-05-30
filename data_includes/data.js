@@ -36,7 +36,7 @@ var defaults = [
     },
     "Dialogue", {
         hasCorrect: true,
-        showNumbers: false,
+        showNumbers: false
     }
 ];
 
@@ -308,5 +308,5 @@ var items = [
         validators: {
             age: function (s) { if (s.match(/^\d+$/)) return true; else return "Bad value for \u2018age\u2019"; }
         }
-    }],
+    }]
 ];
