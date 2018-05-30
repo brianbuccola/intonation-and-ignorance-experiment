@@ -47,6 +47,9 @@ span.retry:visited {
 body {
     font-family: sans-serif;
 }
+div {
+    line-height: 1.5;
+}
 div#audio {
     text-align: center;
 }
