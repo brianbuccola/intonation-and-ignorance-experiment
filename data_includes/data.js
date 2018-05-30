@@ -29,6 +29,7 @@ var defaults = [
     "Separator", {
         transfer: "keypress",
         normalMessage: "Press any key to continue to the next dialogue.",
+        ignoreFailure: true
     },
     "Form", {
         saveReactionTime: true
