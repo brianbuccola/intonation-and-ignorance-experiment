@@ -1,48 +1,69 @@
 <div style="width: 40em;">
-  <p>Please answer the very last few questions below.</p>
-  <table>
-    <tr>
-      <td>What is your age?</td>
-      <td><input name="age" type="text" size="30" class="obligatory" /></td>
-    </tr>
-    <tr>
-      <td colspan="2"><label class="error" for="age"></label></td>
-    </tr>
-    <tr>
-      <td>Sex:</td>
-      <td>
-        <input name="sex" type="radio" value="male" class="obligatory" id="csexmale" /><label for="csexmale">Male</label>
-        <input name="sex" type="radio" value="female" class="obligatory" id="csexfemale" /><label for="csexfemale">Female</label>
-      </td>
-    </tr>
-    <tr>
-      <td colspan="2"><label class="error" for="sex"></label></td>
-    </tr>
-    <tr>
-      <td>What is your native language?</td>
-      <td><textarea name="language" rows="1" cols="10"></textarea></td>
-    </tr>
-    <tr>
-      <td colspan="2"><label class="error" for="language"></label></td>
-    </tr>
-    <tr>
-      <td>What kind of device did you use to answer?</td>
-      <td>
-        <input name="device" type="radio" value="A computer keyboard" class="obligatory" id="compkb" /><label for="comp">A computer keyboard </label><br>
-        <input name="device" type="radio" value="A computer mouse" class="obligatory" id="compms" /><label for="comp">A computer mouse </label><br>
-        <input name="device" type="radio" value="A touch-screen smartphone" class="obligatory" id="tsphone" /><label for="tsphone">A touch-screen smartphone </label><br>
-        <input name="device" type="radio" value="Other kind of phone" class="obligatory" id="othphone" /><label for="othphone">Other kind of phone </label><br>
-        <input name="device" type="radio" value="A tablet" class="obligatory" id="tablet" /><label for="tablet">A touch-screen tablet </label><br>
-        <input name="device" type="radio" value="Other" class="obligatory" id="oth" /><label for="oth">Other </label><br>
-      </td>
-    </tr>
-    <tr>
-      <td colspan="2">Please enter your Mechanical Turk Worker ID to validate your participation:</td>
-      <td><input name="mturkid" type="text" size="30" class="obligatory" /></td>
-    </tr>
-    <tr>
-      <td colspan="2"><label class="error" for="mturkid"></label></td>
-    </tr>
+    <h2>Demographic Questionnaire</h2>
+    <table style="width: 100%;">
+        <colgroup>
+            <col span="1" style="width: 40%;">
+            <col span="2" style="width: 60%;">
+        </colgroup>
+        <tbody>
+            <tr>
+                <td>In what year were you born?</td>
+                <td><input name="age" type="number" size="4" min="1900" max="2018" class="obligatory" /></td>
+            </tr>
+            <tr>
+                <td colspan="2"><label class="error" for="age"></label></td>
+            </tr>
+            <tr>
+                <td>What is your gender?</td>
+                <td>
+                    <input name="gender" type="radio" value="female" class="obligatory" id="cgenderfemale" /><label for="cgenderfemale">Female</label><br>
+                    <input name="gender" type="radio" value="male" class="obligatory" id="cgendermale" /><label for="cgendermale">Male</label><br>
+                    <input name="gender" type="radio" value="other" class="obligatory" id="cgenderother" /><label for="cgenderother">Other</label><br>
+                    <input name="gender" type="radio" value="notsay" class="obligatory" id="cgendernotsay" /><label for="cgendernotsay">I prefer not to say</label><br>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><label class="error" for="gender"></label></td>
+            </tr>
+            <tr>
+                <td>What is your native language?</td>
+                <td><input name="language" type="text" size="10" class="obligatory" /></td>
+            </tr>
+            <tr>
+                <td colspan="2"><label class="error" for="language"></label></td>
+            </tr>
+            <tr>
+                <td>What is your highest level of education?</td>
+                <td>
+                    <input name="education" type="radio" value="highschool" class="obligatory" id="ceduhighschool" /><label for="ceduhighschool">High school diploma</label><br>
+                    <input name="education" type="radio" value="bachelors" class="obligatory" id="cedubachelors" /><label for="cedubachelors">Bachelor's degree</label><br>
+                    <input name="education" type="radio" value="graduate" class="obligatory" id="cedugraduate" /><label for="cedugraduate">Graduate-level degree</label><br>
+                    <input name="education" type="radio" value="other" class="obligatory" id="ceduother" /><label for="ceduother">Other</label><br>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><label class="error" for="education"></label></td>
+            </tr>
+            <tr>
+                <td>What is your college-level background in linguistics, logic, and philosophy?</td>
+                <td>
+                    <input name="background" type="radio" value="none" class="obligatory" id="cbackgroundnone" /><label for="cbackgroundnone">None</label></br>
+                    <input name="background" type="radio" value="1undergrad" class="obligatory" id="cbackground1undergrad" /><label for="cbackground1undergrad">1 undergraduate-level course</label></br>
+                    <input name="background" type="radio" value="2undergrad" class="obligatory" id="cbackground2undergrad" /><label for="cbackground2undergrad">2 or more undergraduate-level courses</label></br>
+                    <input name="background" type="radio" value="1grad" class="obligatory" id="cbackground1grad" /><label for="cbackground1grad">1 or more graduate-level courses</label></br>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><label class="error" for="background"></label></td>
+            </tr>
+            <tr>
+                <td>Enter your Mechanical Turk Worker ID to validate your participation:</td>
+                <td><input name="mturkid" type="text" size="30" class="obligatory" /></td>
+            </tr>
+            <tr>
+                <td colspan="2"><label class="error" for="mturkid"></label></td>
+            </tr>
+        </tbody>
+    </table>
     <p><b>After submitting, please wait till the results are sent to the server. Your participation will not be validated otherwise!</b></p>
-  </table>
 </div>
