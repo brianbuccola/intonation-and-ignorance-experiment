@@ -23,7 +23,7 @@ define_ibex_controller({
 
 var shuffleSequence = seq("consent", "instructions", sepWith("sep", seq("practice", randomize(anyOf("fall", "rfr", "filler")))), "questionnaire");
 var showProgressBar = false;
-var completionMessage = "The results were successfully sent to the server. Thanks! Now you need to go back to Mechanical Turk and enter the code XXXXXX to validate your participation and obtain your payment."
+var completionMessage = "The results were successfully sent to the server. Thanks! Now you need to go back to Mechanical Turk and enter the code PAEX9U to validate your participation and obtain your payment."
 
 var defaults = [
     "Separator", {
