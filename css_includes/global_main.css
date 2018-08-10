@@ -52,6 +52,8 @@ div {
 }
 div#audio {
     text-align: center;
+    border: 1px solid black;
+    padding: 10;
 }
 td {
     padding-top: 0.5em;
