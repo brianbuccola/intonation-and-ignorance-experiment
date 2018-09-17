@@ -132,20 +132,6 @@ var items = [
     }],
 
     ["filler", "Dialogue", {
-        html: '<div id="audio"><audio controls controlsList="nodownload"><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/fillers/alcohol-yes-dec-rev.wav" type="audio/wav"></audio></div>',
-        q: "Based on Pat's response, which of the following sentences is true?",
-        as: ["Pat drinks alcohol.",
-             "Pat doesn't drink alcohol."]
-    }],
-
-    ["filler", "Dialogue", {
-        html: '<div id="audio"><audio controls controlsList="nodownload"><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/fillers/buy-no-dec-rev.wav" type="audio/wav"></audio></div>',
-        q: "Based on Chris's response, which of the following sentences is true?",
-        as: ["Chris isn't going to buy that.",
-             "Chris is going to buy that."]
-    }],
-
-    ["filler", "Dialogue", {
         html: '<div id="audio"><audio controls controlsList="nodownload"><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/fillers/buy-not-no-dec-con.wav" type="audio/wav"></audio></div>',
         q: "Based on Chris's response, which of the following sentences is true?",
         as: ["Chris isn't going to buy that.",
@@ -160,20 +146,6 @@ var items = [
     }],
 
     ["filler", "Dialogue", {
-        html: '<div id="audio"><audio controls controlsList="nodownload"><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/fillers/employee-not-no-CC-rev.wav" type="audio/wav"></audio></div>',
-        q: "Based on Morgan's response, which of the following sentences is true?",
-        as: ["Morgan isn't an employee here.",
-             "Morgan is an employee here."]
-    }],
-
-    ["filler", "Dialogue", {
-        html: '<div id="audio"><audio controls controlsList="nodownload"><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/fillers/friend-no-dec-con.wav" type="audio/wav"></audio></div>',
-        q: "Based on Taylor's response, which of the following sentences is true?",
-        as: ["Taylor isn't a friend of Jenny's.",
-             "Taylor is a friend of Jenny's."]
-    }],
-
-    ["filler", "Dialogue", {
         html: '<div id="audio"><audio controls controlsList="nodownload"><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/fillers/friend-not-yes-dec-con.wav" type="audio/wav"></audio></div>',
         q: "Based on Taylor's response, which of the following sentences is true?",
         as: ["Taylor is a friend of Jenny's.",
@@ -181,24 +153,10 @@ var items = [
     }],
 
     ["filler", "Dialogue", {
-        html: '<div id="audio"><audio controls controlsList="nodownload"><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/fillers/hockey-not-no-dec-rev.wav" type="audio/wav"></audio></div>',
-        q: "Based on Jordan's response, which of the following sentences is true?",
-        as: ["Jordan didn't play on the hockey team.",
-             "Jordan played on the hockey team."]
-    }],
-
-    ["filler", "Dialogue", {
         html: '<div id="audio"><audio controls controlsList="nodownload"><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/fillers/hockey-yes-dec-rev.wav" type="audio/wav"></audio></div>',
         q: "Based on Jordan's response, which of the following sentences is true?",
         as: ["Jordan played on the hockey team.",
              "Jordan didn't play on the hockey team."]
-    }],
-
-    ["filler", "Dialogue", {
-        html: '<div id="audio"><audio controls controlsList="nodownload"><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/fillers/movies-not-yes-dec-con.wav" type="audio/wav"></audio></div>',
-        q: "Based on Devin's response, which of the following sentences is true?",
-        as: ["Devin likes movies.",
-             "Devin doesn't like movies."]
     }],
 
     ["filler", "Dialogue", {
@@ -216,21 +174,7 @@ var items = [
     }],
 
     ["filler", "Dialogue", {
-        html: '<div id="audio"><audio controls controlsList="nodownload"><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/fillers/pres-not-yes-CC-rev.wav" type="audio/wav"></audio></div>',
-        q: "Based on Hunter's response, which of the following sentences is true?",
-        as: ["Hunter is coming to the presentation.",
-             "Hunter isn't coming to the presentation."]
-    }],
-
-    ["filler", "Dialogue", {
         html: '<div id="audio"><audio controls controlsList="nodownload"><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/fillers/trash-not-yes-CC-rev.wav" type="audio/wav"></audio></div>',
-        q: "Based on Riley's response, which of the following sentences is true?",
-        as: ["Riley took the trash out.",
-             "Riley didn't take the trash out."]
-    }],
-
-    ["filler", "Dialogue", {
-        html: '<div id="audio"><audio controls controlsList="nodownload"><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/fillers/trash-yes-CC-rev.wav" type="audio/wav"></audio></div>',
         q: "Based on Riley's response, which of the following sentences is true?",
         as: ["Riley took the trash out.",
              "Riley didn't take the trash out."]
