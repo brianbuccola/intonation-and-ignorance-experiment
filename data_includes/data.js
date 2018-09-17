@@ -59,8 +59,8 @@ var items = [
     //
     ["practice", "Dialogue", {
         html: '<p style="text-align:center;"><em>Practice</em></p><div id="audio"><strong>Version 1:</strong><br><br><audio controls controlsList="nodownload"><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/targets/students-fall.wav" type="audio/wav"></audio></div><br><div id="audio"><strong>Version 2:</strong><br><br><audio controls controlsList="nodownload"><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/targets/reports-fall.wav" type="audio/wav"></audio></div>',
-        as: ["In Version 1, Noah says that some of the students passed, and in Version 2, Elijah says that some of the reports were filed.",
-             "In Version 1, Elijah says that some of the reports were filed, and in Version 2, Noah says that some of the students passed."]
+        as: ["In Version 1, Noah says that some of the students passed, and in Version 2, Noah says that some of the reports were filed.",
+             "In Version 1, Noah says that some of the reports were filed, and in Version 2, Noah says that some of the students passed."]
     }],
 
     ["practice", "Dialogue", {
@@ -99,26 +99,26 @@ var items = [
 
     ["real", "Dialogue", {
         html: '<div id="audio"><strong>Version 1:</strong><br><br><audio controls controlsList="nodownload"><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/targets/dishes-rfr.wav" type="audio/wav"></audio></div><br><div id="audio"><strong>Version 2:</strong><br><br><audio controls controlsList="nodownload"><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/targets/dishes-fall.wav" type="audio/wav"></audio></div>',
-        as: ["In Version 1, Benjamin thinks that not all of the dishes contain meat, and in Version 2, Benjamin isn't sure whether or not all of the dishes contain meat.",
-             "In Version 1, Benjamin isn't sure whether or not all of the dishes contain meat, and in Version 2, Benjamin thinks that not all of the dishes contain meat."]
+        as: ["In Version 1, Benjamin isn't sure whether or not all of the dishes contain meat, and in Version 2, Benjamin thinks that not all of the dishes contain meat.",
+             "In Version 1, Benjamin thinks that not all of the dishes contain meat, and in Version 2, Benjamin isn't sure whether or not all of the dishes contain meat."]
     }],
 
     ["real", "Dialogue", {
         html: '<div id="audio"><strong>Version 1:</strong><br><br><audio controls controlsList="nodownload"><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/targets/clients-rfr.wav" type="audio/wav"></audio></div><br><div id="audio"><strong>Version 2:</strong><br><br><audio controls controlsList="nodownload"><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/targets/clients-fall.wav" type="audio/wav"></audio></div>',
-        as: ["In Version 1, Jacob thinks that not all of the clients met Sophia, and in Version 2, Jacob isn't sure whether or not all of the clients met Sophia.",
-             "In Version 1, Jacob isn't sure whether or not all of the clients met Sophia, and in Version 2, Jacob thinks that not all of the clients met Sophia."]
+        as: ["In Version 1, Jacob isn't sure whether or not all of the clients met Sophia, and in Version 2, Jacob thinks that not all of the clients met Sophia.",
+             "In Version 1, Jacob thinks that not all of the clients met Sophia, and in Version 2, Jacob isn't sure whether or not all of the clients met Sophia."]
     }],
 
     ["real", "Dialogue", {
         html: '<div id="audio"><strong>Version 1:</strong><br><br><audio controls controlsList="nodownload"><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/targets/planes-rfr.wav" type="audio/wav"></audio></div><br><div id="audio"><strong>Version 2:</strong><br><br><audio controls controlsList="nodownload"><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/targets/planes-fall.wav" type="audio/wav"></audio></div>',
-        as: ["In Version 1, Michael thinks that not all of the planes have been delayed, and in Version 2, Michael isn't sure whether or not all of the planes have been delayed.",
-             "In Version 1, Michael isn't sure whether or not all of the planes have been delayed, and in Version 2, Michael thinks that not all of the planes have been delayed."]
+        as: ["In Version 1, Michael isn't sure whether or not all of the planes have been delayed, and in Version 2, Michael thinks that not all of the planes have been delayed.",
+             "In Version 1, Michael thinks that not all of the planes have been delayed, and in Version 2, Michael isn't sure whether or not all of the planes have been delayed."]
     }],
 
     ["real", "Dialogue", {
         html: '<div id="audio"><strong>Version 1:</strong><br><br><audio controls controlsList="nodownload"><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/targets/reports-rfr.wav" type="audio/wav"></audio></div><br><div id="audio"><strong>Version 2:</strong><br><br><audio controls controlsList="nodownload"><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/targets/reports-fall.wav" type="audio/wav"></audio></div>',
-        as: ["In Version 1, Elijah thinks that not all of the reports were filed, and in Version 2, Elijah isn't sure whether or not all of the reports were filed.",
-             "In Version 1, Elijah isn't sure whether or not all of the reports were filed, and in Version 2, Elijah thinks that not all of the reports were filed."]
+        as: ["In Version 1, Elijah isn't sure whether or not all of the reports were filed, and in Version 2, Elijah thinks that not all of the reports were filed.",
+             "In Version 1, Elijah thinks that not all of the reports were filed, and in Version 2, Elijah isn't sure whether or not all of the reports were filed."]
     }],
 
     //
@@ -168,9 +168,9 @@ var items = [
 
     ["filler", "Dialogue", {
         html: '<div id="audio"><audio controls controlsList="nodownload"><source src="https://raw.githubusercontent.com/brianbuccola/intonation-and-ignorance-experiment/master/audio/fillers/pres-no-CC-rev.wav" type="audio/wav"></audio></div>',
-        q: "Based on Hunter's response, which of the following sentences is true?",
-        as: ["Hunter isn't coming to the presentation.",
-             "Hunter is coming to the presentation."]
+        q: "Based on Alex's response, which of the following sentences is true?",
+        as: ["Alex isn't coming to the presentation.",
+             "Alex is coming to the presentation."]
     }],
 
     ["filler", "Dialogue", {
